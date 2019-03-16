@@ -7,6 +7,8 @@ namespace Atko.GDHarp
     {
         event Action Finished;
 
+        SoundOptions Options { get; }
+
         bool Autoplay { get; set; }
 
         AudioStream Stream { get; set; }

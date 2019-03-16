@@ -16,11 +16,11 @@ namespace Atko.GDHarp
 
         ISoundStreamPlayer Player { get; set; }
 
-        internal Sound(Node root, SoundBus bus, AudioStreamSample sample, SoundOptions options)
+        internal Sound(Node root, SoundBus bus, AudioStreamSample sample, SoundOptions options = null)
         {
             Bus = bus;
             Sample = sample;
-            Options = options;
+            Options = options ?? new SoundOptions();
             Root = root;
             Player = CreatePlayer();
 
@@ -47,15 +47,15 @@ namespace Atko.GDHarp
 
             if (Options.Origin is Node2D origin2D)
             {
-                instance = new SoundStreamPlayer2D(origin2D);
+                instance = new SoundStreamPlayer2D(Options);
             }
             else if (Options.Origin is Spatial origin3D)
             {
-                instance = new SoundStreamPlayer3D(origin3D);
+                instance = new SoundStreamPlayer3D(Options);
             }
             else
             {
-                instance = new SoundStreamPlayer();
+                instance = new SoundStreamPlayer(Options);
 
             }
 

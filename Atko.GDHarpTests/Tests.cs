@@ -26,7 +26,6 @@ public class Tests : Node
 
     public override void _Process(float delta)
     {
-
         StopTimer = Math.Max(StopTimer - delta, 0);
         Point.Position += Vector2.Right * delta * 250;
 

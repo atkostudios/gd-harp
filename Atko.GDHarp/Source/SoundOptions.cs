@@ -3,9 +3,11 @@ using NullGuard;
 
 namespace Atko.GDHarp
 {
-    public struct SoundOptions
+    public class SoundOptions
     {
         [AllowNull]
         public Node Origin { get; set; }
+
+        public bool Follows { get; set; } = true;
     }
 }

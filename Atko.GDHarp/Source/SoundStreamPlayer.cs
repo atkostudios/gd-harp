@@ -7,6 +7,13 @@ namespace Atko.GDHarp
     {
         public event Action Finished;
 
+        public SoundOptions Options { get; }
+
+        public SoundStreamPlayer(SoundOptions options)
+        {
+            Options = options;
+        }
+
         public override void _Ready()
         {
             Connect("finished", this, nameof(OnEnded));
@@ -16,6 +23,5 @@ namespace Atko.GDHarp
         {
             Finished?.Invoke();
         }
-
     }
 }

@@ -16,7 +16,7 @@ namespace Atko.GDHarp
             Index = index;
         }
 
-        public Sound Play(AudioStreamSample sample, SoundOptions options = default(SoundOptions))
+        public Sound Play(AudioStreamSample sample, SoundOptions options = null)
         {
             return new Sound(Root, this, sample, options);
         }
