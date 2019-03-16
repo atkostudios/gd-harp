@@ -1,0 +1,15 @@
+.idea
+.vscode
+.mono
+.import
+
+packages
+
+bin
+obj
+
+FodyWeavers.xsd
+
+mono_crash.*.json
+
+.DS_Store

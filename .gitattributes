@@ -1,0 +1,25 @@
+text eol=lf
+
+*.aseprite          binary
+*.cfg               text
+*.config            text
+*.cs                text
+*.csproj            text
+*.dll               binary
+*.gitattributes     text
+*.gitignore         text
+*.godot             text
+*.import            text
+*.json              text
+*.md                text
+*.nupkg             text
+*.otf               binary
+*.png               binary
+*.sh                text
+*.sln               text
+*.tres              text
+*.tscn              text
+*.ttf               binary
+*.wav               binary
+*.ogg               binary
+*.xml               text
